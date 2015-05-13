@@ -16,23 +16,23 @@ var Label = require('framer-uilabel')
 module.exports = class StatusBar extends Layer {
   constructor(options={}) {
     options.style = options.style || 'dark'
-    options.contentScale = options.contentScale || Framer.Device.contentScale
 
-    var padding = 12 / options.contentScale
-    var fontSize = `${24 / options.contentScale}px`
+    var padding = 6
+    var fontSize = `12px`
+    var textColor = 'black'
 
     super(_.extend(options, {
       name: 'statusBar',
-      width: Framer.Screen.width / options.contentScale,
-      height: 40 / options.contentScale,
+      width: Screen.width,
+      height: 20,
       backgroundColor: 'transparent'
     }))
 
     var networkSignal = new Layer({
       name: 'networkSignal',
       superLayer: this,
-      height: 12 / options.contentScale,
-      width: 68 / options.contentScale,
+      height: 6,
+      width: 34,
       x: padding,
       midY: this.midY,
       image: './images/statusBarSignal.png'
@@ -41,19 +41,19 @@ module.exports = class StatusBar extends Layer {
     var networkName = new Label({
       name: 'networkName',
       superLayer: this,
-      x: networkSignal.maxX + 8 / options.contentScale,
+      x: networkSignal.maxX + 4,
       midY: this.midY,
       text: 'Framer',
       fontSize: fontSize,
-      color: 'black'
+      color: textColor
     })
 
     var wifi = new Layer({
       name: 'wifi',
       superLayer: this,
-      width: 28 / options.contentScale,
-      height: 20 / options.contentScale,
-      x: networkName.maxX + 8 / options.contentScale,
+      width: 14,
+      height: 10,
+      x: networkName.maxX + 4,
       midY: this.midY,
       image: './images/statusBarWifi.png'
     })
@@ -65,14 +65,14 @@ module.exports = class StatusBar extends Layer {
       midY: this.midY,
       text: '9:41 AM',
       fontSize: fontSize,
-      color: 'black'
+      color: textColor
     })
 
     var battery = new Layer({
       name: 'battery',
       superLayer: this,
-      width: 50 / options.contentScale,
-      height: 20 / options.contentScale,
+      width: 25,
+      height: 10,
       maxX: this.width - padding,
       midY: this.midY,
       image: './images/statusBarBattery.png'
@@ -82,10 +82,10 @@ module.exports = class StatusBar extends Layer {
       name: 'batteryPercentage',
       superLayer: this,
       text: '100%',
-      maxX: battery.x - 6 / options.contentScale,
+      maxX: battery.x - 3,
       midY: this.midY,
       fontSize: fontSize,
-      color: 'black'
+      color: textColor
     })
 
     this.style = options.style
