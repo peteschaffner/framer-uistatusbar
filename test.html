@@ -61,8 +61,12 @@
         deviceScale: 0.5
       })
       Framer.Device.setupContext()
+      // Make all dimensions relative points (i.e. @1x)
+      Framer.Device.contentScale = 2
+      Framer.Device.content.width = Screen.width / Framer.Device.contentScale
+      Framer.Device.content.height = Screen.height / Framer.Device.contentScale
 
-      new StatusBar()
+      new StatusBar({ style: 'light' })
 
     </script>
   </body>

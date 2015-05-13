@@ -35,7 +35,7 @@ module.exports = class StatusBar extends Layer {
       width: 34,
       x: padding,
       midY: this.midY,
-      image: './images/statusBarSignal.png'
+      image: './images/statusBarSignal.svg'
     })
 
     var networkName = new Label({
@@ -55,7 +55,7 @@ module.exports = class StatusBar extends Layer {
       height: 10,
       x: networkName.maxX + 4,
       midY: this.midY,
-      image: './images/statusBarWifi.png'
+      image: './images/statusBarWifi.svg'
     })
 
     var time = new Label({
@@ -75,7 +75,7 @@ module.exports = class StatusBar extends Layer {
       height: 10,
       maxX: this.width - padding,
       midY: this.midY,
-      image: './images/statusBarBattery.png'
+      image: './images/statusBarBattery.svg'
     })
 
     var batteryPercentage = new Label({
