@@ -14,7 +14,5 @@ app.js:
 ```javascript
 UIStatusBar = require("framer-uistatusbar")
 
-statusbar = new UIStatusBar({
-  theme: 'black'
-})
+statusbar = new UIStatusBar({ style: 'light' })
 ```
