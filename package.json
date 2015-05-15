@@ -2,35 +2,25 @@
   "name": "framer-uistatusbar",
   "version": "0.0.1",
   "description": "iOS status bar module for Framer.js",
+  "repository": "peteschaffner/framer-uistatusbar",
+  "author": "pjschaffner@gmail.com",
+  "license": "MIT",
   "main": "index.js",
   "dependencies": {
     "framer-uilabel": "peteschaffner/framer-uilabel"
   },
   "devDependencies": {
     "babelify": "^6.0.2",
-    "browserify": "^10.0.0",
-    "budo": "^4.0.0",
-    "coffeeify": "^1.1.0",
-    "framerify": "peteschaffner/framerify",
-    "garnish": "^2.1.3"
+    "framer-cli": "peteschaffner/framer-cli",
+    "framerify": "peteschaffner/framerify"
   },
   "scripts": {
-    "start": "NODE_PATH=./modules budo index.js:bundle.js --live --port 3000 -- --transform coffeeify --transform babelify --require ./index.js:statusbar --extension .coffee | garnish"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/peteschaffner/framer-uistatusbar.git"
+    "start": "framer --module"
   },
   "keywords": [
     "prototyping",
     "framerjs"
   ],
-  "author": "pjschaffner@gmail.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/peteschaffner/framer-uistatusbar/issues"
-  },
-  "homepage": "https://github.com/peteschaffner/framer-uistatusbar",
   "browserify": {
     "transform": [
       "babelify",
