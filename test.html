@@ -49,24 +49,13 @@
   </head>
   <body>
     <script src="http://builds.framerjs.com/latest/framer.js"></script>
-    <script src="bundle.js"></script>
+    <script src=".bundle.js"></script>
 
     <script>
 
-      var StatusBar = require('statusbar')
+      var StatusBar = require('.')
 
-      Framer.Device = new Framer.DeviceComponent({
-        deviceType: 'iphone-6-silver',
-        contentScale: 2,
-        deviceScale: 0.5
-      })
-      Framer.Device.setupContext()
-      // Make all dimensions relative points (i.e. @1x)
-      Framer.Device.contentScale = 2
-      Framer.Device.content.width = Screen.width / Framer.Device.contentScale
-      Framer.Device.content.height = Screen.height / Framer.Device.contentScale
-
-      new StatusBar({ style: 'light' })
+      new StatusBar()
 
     </script>
   </body>

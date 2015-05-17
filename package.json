@@ -10,9 +10,7 @@
     "framer-uilabel": "peteschaffner/framer-uilabel"
   },
   "devDependencies": {
-    "babelify": "^6.0.2",
-    "framer-cli": "peteschaffner/framer-cli",
-    "framerify": "peteschaffner/framerify"
+    "framer-cli": "peteschaffner/framer-cli"
   },
   "scripts": {
     "start": "framer --module"
@@ -20,11 +18,5 @@
   "keywords": [
     "prototyping",
     "framerjs"
-  ],
-  "browserify": {
-    "transform": [
-      "babelify",
-      "framerify"
-    ]
-  }
+  ]
 }
