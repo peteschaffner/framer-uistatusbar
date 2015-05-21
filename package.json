@@ -2,21 +2,28 @@
   "name": "framer-uistatusbar",
   "version": "0.0.1",
   "description": "iOS status bar module for Framer.js",
-  "repository": "peteschaffner/framer-uistatusbar",
-  "author": "pjschaffner@gmail.com",
+  "author": {
+    "name": "Pete Schaffner",
+    "email": "pjschaffner@gmail.com"
+  },
   "license": "MIT",
-  "main": "index.js",
-  "dependencies": {
-    "framer-uilabel": "peteschaffner/framer-uilabel"
-  },
-  "devDependencies": {
-    "framer-cli": "peteschaffner/framer-cli"
-  },
-  "scripts": {
-    "start": "framer --module"
-  },
   "keywords": [
     "prototyping",
     "framerjs"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/peteschaffner/framer-uistatusbar.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "framer-uilabel": "^0.1.0"
+  },
+  "devDependencies": {
+    "framer-cli": "^0.1.0"
+  },
+  "scripts": {
+    "start": "framer preview"
+  },
+  "framer": { "type": "module" }
 }
