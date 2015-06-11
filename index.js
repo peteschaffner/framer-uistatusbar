@@ -5,6 +5,8 @@
 
 var Label = require('framer-uilabel')
 
+var dirname = __dirname === '/' ? '' : __dirname
+
 /**
  * iOS status bar for your prototyping pleasure.
  *
@@ -35,7 +37,7 @@ module.exports = class StatusBar extends Layer {
       width: 34,
       x: padding,
       midY: this.midY,
-      image: `${__dirname}./images/statusBarSignal.svg`
+      image: `${dirname}/images/statusBarSignal.svg`
     })
 
     var networkName = new Label({
@@ -55,7 +57,7 @@ module.exports = class StatusBar extends Layer {
       height: 10,
       x: networkName.maxX + 4,
       midY: this.midY,
-      image: `${__dirname}./images/statusBarWifi.svg`
+      image: `${dirname}/images/statusBarWifi.svg`
     })
 
     var time = new Label({
@@ -75,7 +77,7 @@ module.exports = class StatusBar extends Layer {
       height: 10,
       maxX: this.width - padding,
       midY: this.midY,
-      image: `${__dirname}./images/statusBarBattery.svg`
+      image: `${dirname}/images/statusBarBattery.svg`
     })
 
     var batteryPercentage = new Label({
