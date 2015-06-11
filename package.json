@@ -1,6 +1,6 @@
 {
   "name": "framer-uistatusbar",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "iOS status bar module for Framer.js",
   "author": {
     "name": "Pete Schaffner",
@@ -20,7 +20,7 @@
     "framer-uilabel": "^0.1.0"
   },
   "devDependencies": {
-    "framer-cli": "^0.1.0"
+    "framer-cli": "*"
   },
   "scripts": {
     "start": "framer preview"
